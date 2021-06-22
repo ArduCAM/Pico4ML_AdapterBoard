@@ -1,12 +1,4 @@
-/*
- * Copyright (c) 2021 Arm Limited and Contributors. All rights reserved.
- *
- * SPDX-License-Identifier: Apache-2.0
- * 
- * This examples captures data from a PDM microphone using a sample
- * rate of 8 kHz and prints the sample values over the USB serial
- * connection.
- */
+
 
 #include <stdio.h>
 #include <string.h>

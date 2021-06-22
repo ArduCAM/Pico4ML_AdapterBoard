@@ -1,16 +1,4 @@
-/*
- * Copyright (c) 2021 Arm Limited and Contributors. All rights reserved.
- *
- * SPDX-License-Identifier: Apache-2.0
- * 
- * This examples creates a USB Microphone device using the TinyUSB
- * library and captures data from a PDM microphone using a sample
- * rate of 16 kHz, to be sent the to PC.
- * 
- * The USB microphone code is based on the TinyUSB audio_test example.
- * 
- * https://github.com/hathach/tinyusb/tree/master/examples/device/audio_test
- */
+
 
 #include "pico/pdm_microphone.h"
 
