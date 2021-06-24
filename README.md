@@ -16,7 +16,7 @@ git clone https://github.com/ArduCAM/Pico4ML_AdapterBoard.git
 
 ### Compile
 ```
-cd  HM01B0
+cd  Pico4ML_AdapterBoard/HM01B0
 mkdir build
 cd build
 cmake ..
@@ -27,7 +27,7 @@ make
 
 ### Compile
 ```
-cd  HM0360
+cd  Pico4ML_AdapterBoard/HM0360
 mkdir build
 cd build
 cmake ..
@@ -41,7 +41,7 @@ make
 
 ### Compile
 ```
-cd  PICO_SPI_Camera
+cd  Pico4ML_AdapterBoard/PICO_SPI_Camera
 mkdir build
 cd build
 cmake ..
@@ -52,7 +52,19 @@ make
 
 ### Compile
 ```
-cd  pico-wake-word
+cd  Pico4ML_AdapterBoard/pico-wake-word
+mkdir build
+cd build
+cmake ..
+make 
+```
+
+
+## tflmicro
+
+### Compile
+```
+cd  Pico4ML_AdapterBoard/tflmicro
 mkdir build
 cd build
 cmake ..
