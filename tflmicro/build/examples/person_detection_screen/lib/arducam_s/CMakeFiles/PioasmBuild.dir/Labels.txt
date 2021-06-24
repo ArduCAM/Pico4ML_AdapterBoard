@@ -1,0 +1,13 @@
+# Target labels
+ PioasmBuild
+# Source files and their labels
+D:/Git/warehouse/Pico4ML_AdapterBoard/tflmicro/build/examples/person_detection_screen/lib/arducam_s/CMakeFiles/PioasmBuild
+D:/Git/warehouse/Pico4ML_AdapterBoard/tflmicro/build/examples/person_detection_screen/lib/arducam_s/CMakeFiles/PioasmBuild.rule
+D:/Git/warehouse/Pico4ML_AdapterBoard/tflmicro/build/examples/person_detection_screen/lib/arducam_s/CMakeFiles/PioasmBuild-complete.rule
+D:/Git/warehouse/Pico4ML_AdapterBoard/tflmicro/build/examples/person_detection_screen/lib/arducam_s/pioasm/src/PioasmBuild-stamp/PioasmBuild-build.rule
+D:/Git/warehouse/Pico4ML_AdapterBoard/tflmicro/build/examples/person_detection_screen/lib/arducam_s/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure.rule
+D:/Git/warehouse/Pico4ML_AdapterBoard/tflmicro/build/examples/person_detection_screen/lib/arducam_s/pioasm/src/PioasmBuild-stamp/PioasmBuild-download.rule
+D:/Git/warehouse/Pico4ML_AdapterBoard/tflmicro/build/examples/person_detection_screen/lib/arducam_s/pioasm/src/PioasmBuild-stamp/PioasmBuild-install.rule
+D:/Git/warehouse/Pico4ML_AdapterBoard/tflmicro/build/examples/person_detection_screen/lib/arducam_s/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir.rule
+D:/Git/warehouse/Pico4ML_AdapterBoard/tflmicro/build/examples/person_detection_screen/lib/arducam_s/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch.rule
+D:/Git/warehouse/Pico4ML_AdapterBoard/tflmicro/build/examples/person_detection_screen/lib/arducam_s/pioasm/src/PioasmBuild-stamp/PioasmBuild-update.rule

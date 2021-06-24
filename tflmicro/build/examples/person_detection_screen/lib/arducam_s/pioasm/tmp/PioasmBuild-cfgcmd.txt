@@ -1,0 +1,1 @@
+cmd='D:/PiPico/Cmake/bin/cmake.exe;-GNinja;<SOURCE_DIR><SOURCE_SUBDIR>'
