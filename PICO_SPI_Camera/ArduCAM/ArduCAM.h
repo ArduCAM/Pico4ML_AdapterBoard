@@ -333,7 +333,7 @@
 #define PIN_SCK  2
 #define PIN_MOSI 3
 #define PIN_MISO 4
-#define PIN_CS   10
+#define PIN_CS   19
 
 
 /*i2c pin source */
@@ -489,7 +489,7 @@ class ArduCAM
 	void transferBytes_(uint8_t * out, uint8_t * in, uint8_t size);
 	void transferBytes(uint8_t * out, uint8_t * in, uint32_t size);
 	inline void setDataBits(uint16_t bits);
-	void Arducam_uart_init(int baudrate);
+	void Arducam_init(void);
   protected:
 	regtype *P_CS;
 	regsize B_CS;
