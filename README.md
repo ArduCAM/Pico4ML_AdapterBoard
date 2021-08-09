@@ -118,7 +118,7 @@ make
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | person_detection_screen										|This example uses the HM01BO or HM0360 camera to detect people and displays the recognition results on the screen.|
 | person_detection									|This example uses the OV2640 camera for person detection, and displays the recognition result through the person_detection_display script.|
-**HM01B0 camera for face recognition**
+### HM01B0 camera for face recognition
 ![EasyBehavior](https://github.com/UCTRONICS/pic/blob/master/pico4ml_extend_Picture/person_demo.png)
-**OV2640 camera for face recognition**
+### OV2640 camera for face recognition
 ![EasyBehavior](https://github.com/UCTRONICS/pic/blob/master/pico4ml_extend_Picture/person_ov2640.png)
