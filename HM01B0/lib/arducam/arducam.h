@@ -25,6 +25,7 @@ struct arducam_config {
 	enum i2c_mode sccb_mode;
 	uint pin_sioc;
 	uint pin_siod;
+	uint power_en;
 	uint pin_resetb;
 	uint pin_xclk;
 	uint pin_vsync;
@@ -45,6 +46,7 @@ extern int PIN_CAM_RESETB;
 extern int PIN_CAM_XCLK;
 extern int PIN_CAM_VSYNC;
 extern int PIN_CAM_Y2_PIO_BASE;
+extern int PIN_POWER_EN;
 
 void arducam_init(struct arducam_config *config);
 void arducam_capture_frame(struct arducam_config *config, uint8_t* image);

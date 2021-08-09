@@ -140,13 +140,13 @@
 
 // mini 160x80 display (it's unlikely you want the default orientation)
 
-#define ST7735_IS_160X80 1
-#define ST7735_XSTART 24
-#define ST7735_YSTART 0
-#define ST7735_WIDTH  80
-#define ST7735_HEIGHT 160 
-//#define ST7735_ROTATION (ST7735_MADCTL_MX | ST7735_MADCTL_MY | ST7735_MADCTL_BGR)
-#define ST7735_ROTATION ( ST7735_MADCTL_BGR)
+// #define ST7735_IS_160X80 1
+// #define ST7735_XSTART 24
+// #define ST7735_YSTART 0
+// #define ST7735_WIDTH  80
+// #define ST7735_HEIGHT 160 
+// //#define ST7735_ROTATION (ST7735_MADCTL_MX | ST7735_MADCTL_MY | ST7735_MADCTL_BGR)
+// #define ST7735_ROTATION ( ST7735_MADCTL_BGR)
 
 // mini 160x80, rotate left
 /*
@@ -159,14 +159,14 @@
 */
 
 // mini 160x80, rotate right 
-/*
+
 #define ST7735_IS_160X80 1
 #define ST7735_XSTART 0
 #define ST7735_YSTART 24
 #define ST7735_WIDTH  160
 #define ST7735_HEIGHT 80
 #define ST7735_ROTATION (ST7735_MADCTL_MY | ST7735_MADCTL_MV | ST7735_MADCTL_BGR)
-*/
+
 /****************************/
 
 #define ST7735_NOP     0x00

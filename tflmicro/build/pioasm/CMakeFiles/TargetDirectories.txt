@@ -1,3 +1,0 @@
-D:/Git/warehouse/Pico4ML_AdapterBoard/tflmicro/build/pioasm/CMakeFiles/pioasm.dir
-D:/Git/warehouse/Pico4ML_AdapterBoard/tflmicro/build/pioasm/CMakeFiles/edit_cache.dir
-D:/Git/warehouse/Pico4ML_AdapterBoard/tflmicro/build/pioasm/CMakeFiles/rebuild_cache.dir

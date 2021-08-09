@@ -15,11 +15,12 @@ int main(void)
 	sleep_ms(1000);
 	ST7735_Init();
 	struct arducam_config config;
-	config.sccb = i2c0;
+	config.sccb = i2c1;
 	config.sccb_mode = I2C_MODE_16_8;
 	config.sensor_address = 0x24;
 	config.pin_sioc = PIN_CAM_SIOC;
 	config.pin_siod = PIN_CAM_SIOD;
+	config.power_en = PIN_POWER_EN;
 	config.pin_resetb = PIN_CAM_RESETB;
 	config.pin_xclk = PIN_CAM_XCLK;
 	config.pin_vsync = PIN_CAM_VSYNC;

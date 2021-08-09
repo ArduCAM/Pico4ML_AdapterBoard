@@ -15,8 +15,8 @@ int main(int argc, char* argv[]) {
   stdio_init_all();
   ST7735_Init();
   ST7735_FillScreen(ST7735_GREEN);
-  ST7735_WriteString(5, 20, "Micro", Font_11x18, ST7735_BLACK, ST7735_GREEN);
-  ST7735_WriteString(10, 45, "Speech", Font_11x18, ST7735_BLACK, ST7735_GREEN);
+  ST7735_WriteString(90, 20,  "Micro", Font_11x18, ST7735_BLACK, ST7735_GREEN);
+  ST7735_WriteString(90, 40, "Speech", Font_11x18, ST7735_BLACK, ST7735_GREEN);
   setup();
   while (true) {
     loop();
