@@ -7,9 +7,9 @@ git clone https://github.com/ArduCAM/Pico4ML_AdapterBoard.git
 
 ## Pico4ML_AdapterBoard Examples
 + HM01B0
-* HM0360
++ HM0360
 + MagicWand
-- PICO_SPI_Camera
++ PICO_SPI_Camera
 + pico-wake-word
 + tflmicro
 
