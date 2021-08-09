@@ -47,7 +47,8 @@ make
 ```
 ![EasyBehavior](https://github.com/UCTRONICS/pic/blob/master/pico4ml_extend_Picture/MagicWand_make.png)
 **This project provides two examples**
-| Folder                                                          | Description                                                  |
+| Folder                                                       | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
 | magic_wand										|This example can recognize Solpe, Ring, and Wing gestures, and display the recognition results on the screen.|
 | magic_wand_ble									|This example can recognize 0-9 gestures, display the recognition results on the screen, and send the data to the web page through the Bluetooth module.|
 ### Solpe, Ring, Wing gestures are as follows
@@ -113,7 +114,8 @@ make
 ```
 ![EasyBehavior](https://github.com/UCTRONICS/pic/blob/master/pico4ml_extend_Picture/person_make.png)
 **This project provides two examples**
-| Folder                                                          | Description                                                  |
+| Folder                                                       | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
 | person_detection_screen										|This example uses the HM01BO or HM0360 camera to detect people and displays the recognition results on the screen.|
 | person_detection									|This example uses the OV2640 camera for person detection, and displays the recognition result through the person_detection_display script.|
 **HM01B0 camera for face recognition**
