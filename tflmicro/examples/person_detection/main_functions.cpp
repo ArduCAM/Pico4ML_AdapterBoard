@@ -190,14 +190,14 @@ void loop() {
                             input->data.int8)) {
     TF_LITE_REPORT_ERROR(error_reporter, "Image capture failed.");
   }
-  TF_LITE_MICRO_EXECUTION_TIME_SNIPPET_END(error_reporter, "GetImage")
+  // TF_LITE_MICRO_EXECUTION_TIME_SNIPPET_END(error_reporter, "GetImage")
 
   TF_LITE_MICRO_EXECUTION_TIME_SNIPPET_START(error_reporter)
   // Run the model on this input and make sure it succeeds.
   if (kTfLiteOk != interpreter->Invoke()) {
     TF_LITE_REPORT_ERROR(error_reporter, "Invoke failed.");
   }
-  TF_LITE_MICRO_EXECUTION_TIME_SNIPPET_END(error_reporter, "Invoke")
+  // TF_LITE_MICRO_EXECUTION_TIME_SNIPPET_END(error_reporter, "Invoke")
 
   TfLiteTensor* output = interpreter->output(0);
 

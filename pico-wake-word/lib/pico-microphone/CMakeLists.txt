@@ -28,6 +28,3 @@ pico_generate_pio_header(pico_pdm_microphone ${CMAKE_CURRENT_LIST_DIR}/src/pdm_m
 
 target_link_libraries(pico_pdm_microphone INTERFACE pico_stdlib hardware_dma hardware_pio)
 
-
-add_subdirectory("examples/hello_pdm_microphone")
-add_subdirectory("examples/usb_microphone")

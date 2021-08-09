@@ -28,16 +28,16 @@ void RespondToCommand(tflite::ErrorReporter* error_reporter,
                          score, current_time);
 
     if (found_command == "yes"){
-      ST7735_FillRectangle(0, 90, ST7735_WIDTH, 70, ST7735_GREEN);
-      ST7735_WriteString(25, 90, found_command, Font_11x18, ST7735_BLACK, ST7735_GREEN);
+      ST7735_FillRectangle(0, 30, ST7735_HEIGHT, 40, ST7735_GREEN);
+      ST7735_WriteString(25, 30, found_command, Font_11x18, ST7735_BLACK, ST7735_GREEN);
     }
     else if (found_command == "no") {
-      ST7735_FillRectangle(0, 90, ST7735_WIDTH, 70, ST7735_GREEN);
-      ST7735_WriteString(30, 90, found_command, Font_11x18, ST7735_BLACK, ST7735_GREEN);
+      ST7735_FillRectangle(0, 30, ST7735_HEIGHT, 40, ST7735_GREEN);
+      ST7735_WriteString(30, 30, found_command, Font_11x18, ST7735_BLACK, ST7735_GREEN);
     }
     else{
-      ST7735_FillRectangle(0, 90, ST7735_WIDTH, 70, ST7735_GREEN);
-      ST7735_WriteString(1, 90, found_command, Font_11x18, ST7735_BLACK, ST7735_GREEN);
+      ST7735_FillRectangle(0, 30, ST7735_HEIGHT, 40, ST7735_GREEN);
+      ST7735_WriteString(1, 30, found_command, Font_11x18, ST7735_BLACK, ST7735_GREEN);
     }
   }
 }

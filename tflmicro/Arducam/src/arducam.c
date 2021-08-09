@@ -8,9 +8,14 @@
 #include "pico/binary_info.h"
 #include "arducam.h"
 #include "ov2640.h"
+#include "bsp/board.h"
+#include "tusb.h"
+#include "pico/mutex.h"
 
 // Define sensor slave address
 void picoSystemInit() {
+    stdio_init_all();
+    tusb_init();
     // This example will use I2C0 on GPIO4 (SDA) and GPIO5 (SCL)
     i2c_init(I2C_PORT, 100 * 1000);
     gpio_set_function(PIN_SDA, GPIO_FUNC_I2C);
@@ -256,6 +261,58 @@ uint8_t ov2640Probe() {
         printf("Can't find ov2640 sensor\r\n");
         return 1;
     }
+}
+
+
+void SerialUsb(uint8_t* buf,uint32_t length)
+{
+    static uint64_t last_avail_time;
+    int i = 0;
+    if (tud_cdc_connected()) 
+    {
+        for (int i = 0; i < length;) 
+        {
+            int n = length - i;
+            int avail = tud_cdc_write_available();
+            if (n > avail) n = avail;
+            if (n) 
+            {
+                int n2 = tud_cdc_write(buf + i, n);
+                tud_task();
+                tud_cdc_write_flush();
+                i += n2;
+                last_avail_time = time_us_64();
+            } 
+            else 
+            {
+                tud_task();
+                tud_cdc_write_flush();
+                if (!tud_cdc_connected() ||
+                    (!tud_cdc_write_available() && time_us_64() > last_avail_time + 1000000 /* 1 second */)) {
+                    break;
+                }
+            }
+        }
+    } 
+    else 
+    {
+        // reset our timeout
+        last_avail_time = 0;
+    }
+}
+
+int SerialUSBAvailable(void)
+{
+  return tud_cdc_available();
+} 
+
+int SerialUsbRead(void) 
+{
+  if (tud_cdc_connected() && tud_cdc_available()) 
+  {
+    return tud_cdc_read_char();
+  }
+  return -1;
 }
 
 struct camera_operate arducam = {

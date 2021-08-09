@@ -60,12 +60,9 @@ TfLiteStatus GetImage(tflite::ErrorReporter* error_reporter, int image_width,
     arducam.cameraInit(YUV);
     first = false;
   }
-  TF_LITE_MICRO_EXECUTION_TIME_BEGIN
-  TF_LITE_MICRO_EXECUTION_TIME(error_reporter, capture((uint8_t *)image_data));
-#ifndef DO_NOT_OUTPUT_TO_UART
-  TF_LITE_MICRO_EXECUTION_TIME(error_reporter, uart_write_blocking(UART_ID, header, 2));
-  TF_LITE_MICRO_EXECUTION_TIME(error_reporter, uart_write_blocking(UART_ID, (uint8_t *)image_data, kMaxImageSize));
-#endif
+  capture((uint8_t *)image_data);
+  SerialUsb(header, 2);
+  SerialUsb((uint8_t *)image_data, kMaxImageSize);
   for (int i = 0; i < image_width * image_height * channels; ++i) {
     image_data[i] = (uint8_t)image_data[i] - 128;
   }

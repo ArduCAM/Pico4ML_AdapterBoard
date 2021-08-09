@@ -28,7 +28,7 @@ uint8_t bmp_header[BMPIMAGEOFFSET] =
 };
 // set pin 7 as the slave select for the digital pot:
 // set pin 7 as the slave select for the digital pot:
-const uint8_t CS = 19;
+const uint8_t CS = 12;
 bool is_header = false;
 int mode = 0;
 uint8_t start_capture = 0;
@@ -431,10 +431,10 @@ int main()
       }
       if (myCAM.get_bit(ARDUCHIP_TRIG, CAP_DONE_MASK))
       {
-        // printf("ACK CMD CAM Capture Done.");
         read_fifo_burst(myCAM);
-        //Clear the capture done flag
         myCAM.clear_fifo_flag();
+        mode=0;
+        
       }
     }
     else if (mode == 2)

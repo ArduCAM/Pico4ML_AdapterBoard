@@ -10,9 +10,10 @@
 
 int PIN_LED = 25;
 
-int PIN_CAM_SIOD = 4; // I2C0 SDA
-int PIN_CAM_SIOC = 5; // I2C0 SCL
+int PIN_CAM_SIOD = 18; // I2C0 SDA
+int PIN_CAM_SIOC = 19; // I2C0 SCL
 int PIN_CAM_RESETB = 2;
+int PIN_POWER_EN = 5;
 int PIN_CAM_XCLK = 3;
 int PIN_CAM_VSYNC = 16;     //GP15 hsync  GP14 pixel clock     
 int PIN_CAM_Y2_PIO_BASE = 6;   // data GPIO6
@@ -224,6 +225,10 @@ void arducam_init(struct arducam_config *config){
 	pwm_set_wrap(slice_num, 9);
 	pwm_set_gpio_level(config->pin_xclk, 3);
 	pwm_set_enabled(slice_num, true);
+
+	gpio_init(config->power_en);
+	gpio_set_dir(config->power_en, GPIO_OUT);
+	gpio_put(config->power_en, 0);
 #ifndef SOFTWARE_I2C
 	// SCCB I2C @ 100 kHz
 	gpio_set_function(config->pin_sioc, GPIO_FUNC_I2C);

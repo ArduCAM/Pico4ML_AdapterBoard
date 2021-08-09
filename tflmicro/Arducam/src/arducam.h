@@ -10,7 +10,7 @@ extern "C" {
 #define PIN_SCK  2
 #define PIN_MOSI 3
 #define PIN_MISO 4
-#define PIN_CS   19
+#define PIN_CS   12
 
 #define JPEG   0
 #define RGB565 1
@@ -96,6 +96,9 @@ int wrSensorRegs8_8(const struct sensor_reg reglist[]);
 void write_reg(uint8_t address, uint8_t value);
 uint8_t read_reg(uint8_t address);
 void capture(uint8_t *data);
+void SerialUsb(uint8_t* buffer,uint32_t lenght);
+int SerialUSBAvailable(void);
+int SerialUsbRead(void);
 #endif
 
 #ifdef __cplusplus
